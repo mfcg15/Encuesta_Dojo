@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  <title>Formulario Dojo</title>
+</head>
+<body>
+  <div class="contenedor">
+    {% block contenedor%}
+    <h1>Dojo Survey</h1>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          {% for message in messages %}
+              <p>{{message}}</p>
+          {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <form action="/create_dojo" method="post">
+      <div class="caja">
+        <label for="nombre">Name:</label>
+        <input type="text" name="nombre">
+      </div>
+      <div class="caja">
+        <label for="ubicacion">Dojo Location:</label>
+        <select name="ubicacion">
+          <option value=" ">--Select A Location--</option>
+          <option value="Chicago">Chicago</option>
+          <option value="Seattld">Seattld</option>
+          <option value="Online">Online</option>
+          <option value="Burbank">Burbank</option>
+          <option value="Bellevue">Bellevue</option>
+        </select>
+      </div>
+      <div class="caja">
+        <label for="idioma">Favorite Language:</label>
+        <select name="idioma">
+          <option value=" ">--Select A Language--</option>
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="Python">Python</option>
+          <option value="C#">C#</option>
+        </select>
+      </div>
+      <div class="caja">
+        <label for="comentario">Comments:</label>
+        <textarea name="comentario" id="" rows="12"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    {% endblock %}
+  </div>
+</body>
+</html>

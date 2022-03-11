@@ -1,0 +1,76 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.contenedor
+{
+    border: 1px solid black;
+    width: 28%;
+    padding: 36px;
+    background-color: #34393f;
+}
+
+h1
+{
+    color: #e8c024;
+    font-size: 32px;
+}
+
+.caja
+{
+    display: flex;
+    flex-direction: column;
+}
+
+h1, .caja
+{
+    margin-bottom: 15px;
+}
+
+label
+{
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+input,select
+{
+    height: 30px;
+}
+
+button
+{
+    padding: 5px;
+    font-size: 20px;
+    background-color: #fec00c;
+}
+
+.letraAzules
+{
+    color: #1374f3;
+    font-size: 32px;
+}
+
+p
+{
+    color: white;
+    margin-bottom: 18px;
+}
+
+a
+{
+    color: #1374f3;
+    text-decoration: none;
+}
